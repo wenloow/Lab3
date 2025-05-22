@@ -21,12 +21,10 @@ public class InLabByHandTranslator implements Translator {
      * @param country the country
      * @return list of language abbreviations which are available for this country
      */
-    // TODO Checkstyle: Static variable definition in wrong order.
     public static final String CANADA = "can";
 
     @Override
     public List<String> getCountryLanguages(String country) {
-        // TODO Checkstyle: The String "can" appears 4 times in the file.
         if (CANADA.equals(country)) {
             return new ArrayList<>(List.of("de", "en", "zh"));
         }
@@ -53,8 +51,6 @@ public class InLabByHandTranslator implements Translator {
      */
     @Override
     public String translate(String country, String language) {
-        // TODO Checkstyle: Return count is 5 (max allowed for non-void methods/ lambdas is 2).
-        // TODO Checkstyle: String literal expressions should be on the left side of an equals comparison
         String result = "";
         if (country.equals(CANADA)) {
             if ("de".equals(language)) {
